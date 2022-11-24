@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- link 공통 -->
+    <link href="../../css/com/resset.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/com/common.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/com/common_media.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/subpage/sub.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/subpage/sub_media.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- plugin_css 공통 -->
+    <link href="../../css/plugin/slick.css" rel="stylesheet" type="text/css"/>
+
+    <!-- script 공통 -->
+    <script src="../../js/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    
+    <!-- plugin_js 공통 -->
+   <script src="../../js/plugin/slick.min.js" type="text/javascript"></script>
+
+    <!-- content script -->
+    <script src="../../js/jquery_ui/common.js?ver=20190821" type="text/javascript"></script>
+    <script src="../../js/jquery_ui/sub.js" type="text/javascript"></script>
+    
+    <title>KBN PORTAL | </title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- #header -->
+        <div id="header">
+            <div class="header-wrap">
+                <div class="header-wrap__content">
+                    <div class="header-wrap__select language-select">
+                        <a href="javascript:;" class="header-wrap__select__title">LANGUAGE<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../../index.html">KOREAN</a></li>
+                            <li><a href="../../eng/index.html">ENGLISH</a></li>
+                        </ul>
+                    </div>
+                    <h1 class="header-wrap__content__logo">
+                        <a href="../../index.html" title="KBN PORTAL 메인으로 이동"><img src="../../images/com/head_logo.gif" alt="KBN PORTAL" /></a>
+                    </h1>
+                    <!-- 일반회원 로그인시 노출 -->
+                    <!-- <div class="header-wrap__select person-select">
+                        <a href="javascript:;" class="header-wrap__select__title">마이페이지<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../maypage/my_storage.html">관심자원 보관함</a></li>
+                            <li><a href="../maypage/my_sale.html">분양현황</a></li>
+                            <li><a href="../maypage/my_answer.html">온라인상담 답변확인</a></li>
+                            <li><a href="../maypage/my_personalinformation.html">개인정보변경</a></li>
+                            <li><a href="../maypage/my_pasword.html">비밀번호변경</a></li>
+                            <li><a href="../maypage/my_withdrawal.html">회원탈퇴신청</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- // 일반회원 로그인시 노출 -->
+                    <!-- 분양담당자 로그인시 노출 -->
+                    <!-- <div class="header-wrap__select person-select">
+                        <a href="javascript:;" class="header-wrap__select__title">분양담당자<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../maypage/admin_onlinemanagement.html">온라인상담관리</a></li>
+                            <li><a href="../maypage/admin_oapplication.html">분양신청관리</a></li>
+                            <li><a href="../maypage/admin_deliberation.html">분양심의관리</a></li>
+                            <li><a href="../maypage/admin_registration.html">분양등록</a></li>
+                            <li><a href="../maypage/admin_close.html">활용종료</a></li>
+                            <li><a href="../maypage/admin_statistics.html">통계</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- // 분양담당자 로그인시 노출 -->
+                    <div class="header-wrap__content__login-out">
+                        <a href="../maypage/login.html" title="로그인" class="login">로그인</a>
+                        <!-- 로그인시 노출 -->
+                        <!-- <a href="javascript:;" title="로그아웃" class="logout">로그아웃</a> -->
+                        <!-- // 로그인시 노출 -->
+                    </div>
+                    <div class="header-wrap__content__mo-btn">
+                        <a href="javascript:;">
+                            <img src="../../images/icon/icon_menu.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-wrap">
+                <div class="gnb-wrap__content">
+                    <em id="gnbLine"></em>
+                    <ul class="gnb-wrap__content__menu">
+                        <li><a href="javascript:;">소개</a></li>
+                        <li><a href="javascript:;">인체자원현황</a></li>
+                        <li><a href="javascript:;">인체자원검색</a></li>
+                        <li><a href="javascript:;">분양신청</a></li>
+                        <li><a href="javascript:;">알림</a></li>
+                    </ul>
+                </div>
+                <div class="gnb-wrap__subgnb-wrap">
+                    <div class="gnb-wrap__subgnb-wrap__content-wrap">
+                        <div class="gnb-wrap__subgnb-wrap__content">
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu01">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">소개</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">한국인체자원은행</a>
+                                            <ul>
+                                                <li><a href="../introduction/knb_background.html">배경</a></li>
+                                                <li><a href="../introduction/knb_history.html">연혁</a></li>
+                                                <li><a href="../introduction/knb_vision.html">비전 및 전략</a></li>
+                                                <li><a href="../introduction/knb_system.html">수행체계</a></li>
+                                                <li><a href="../introduction/knb_law.html">관련법률</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">한국인체자원은행<br />네트워크(KBN)</a>
+                                            <ul>
+                                                <li><a href="../introduction/knb_info.html">KBN 구성현황</a></li>
+                                                <li><a href="../introduction/knb_prtal.html">KBN Portal</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu02">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">인체자원현황</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">수집현황</a>
+                                            <ul>
+                                                <li><a href="../humanresource_status/collection_disease.html">질환별</a></li>
+                                                <li><a href="../humanresource_status/collection_humanbody.html">인체유래물별</a></li>
+                                                <li><a href="../humanresource_status/collection_organization.html">단위은행별</a></li>
+                                                <li><a href="../humanresource_status/collection_year.html">연도별</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">분양현황</a>
+                                            <ul>
+                                                <li><a href="../humanresource_status/salestatus_disease.html">질환별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_humanbody.html">인체유래물별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_organization.html">단위은행별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_year.html">연도별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_tasklist.html">분양과제목록</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">성과현황</a>
+                                            <ul>
+                                                <li><a href="../humanresource_status/result_thesis.html">활용성과(논문)</a></li>
+                                                <li><a href="../humanresource_status/result_patent.html">활용성과(특허)</a></li>
+                                                <li><a href="../humanresource_status/result_research.html">주요우수연구성과</a></li>
+                                                <li><a href="../humanresource_status/result_education.html">교육성과</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu03">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">인체자원검색</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="../humanresource_search/humanresources_keyword.html">키워드 검색</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../humanresource_search/humanresources_disease.html">KCD질병분류 검색</a>
+                                            <ul>
+                                                <li><a href="../humanresource_search/humanresources_disease.html">
+                                                빠른검색</a></li>
+                                                <li><a href="../humanresource_search/kcdSearch.html">단계별검색</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu04">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">분양신청</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">분양신청안내</a>
+                                            <ul>
+                                                <li><a href="../sale_apply/saleapply_supportcenter.html">분양지원센터</a></li>
+                                                <li><a href="../sale_apply/saleapply_way.html">신청방법</a></li>
+                                                <li><a href="../sale_apply/saleapply_form.html">관련서식</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../sale_apply/saleapply_write.html">분양신청서 작성</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../sale_apply/saleapply_onlinecounseling.html">온라인상담</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu05">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">알림</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="../notification/notice_list.html">공지사항</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/data_list.html">자료실</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/notice_img_list.html">갤러리</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/faq_list.html">FAQ</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/related_sites.html">관련사이트</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/knb_contact.html">CONTACT US</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-wrap-mo">
+                <h2 class="gnb-wrap-mo__title">
+                    전체메뉴
+
+                    <div class="header-wrap__select language-select">
+                        <a href="javascript:;" class="header-wrap__select__title">LANGUAGE<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../../index.html">KOREAN</a></li>
+                            <li><a href="../../eng/index.html">ENGLISH</a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:;"><img src="../../images/icon/icon_close_white.png" alt="" /></a>
+                </h2>
+                <div class="gnb-wrap-mo__content">
+                    <div class="gnb-wrap-mo__content__top">
+                        <!-- 로그인 안된 경우 -->
+                        <!-- <ul>
+                            <li class="gnb-wrap-mo__content__login">
+                                <a href="javascript:;">로그인</a>
+                            </li>
+                        </ul> -->
+                        <!-- // 로그인 안된 경우 -->
+                        <!-- 로그인 된 경우 -->
+                        <ul>
+                            <li class="gnb-wrap-mo__content__peson">
+                                <a href="javascript:void(0);">마이페이지<span class="select-arrow"></span></a>
+                                <select onchange="if(this.value) location.href=(this.value);">
+                                    <option value="/contents/maypage/my_storage.html">관심자원 보관함</option>
+                                    <optgroup label="분양현황">
+                                        <option value="../maypage/my_sale.html">분양현황조회</option>
+                                        <option value="../maypage/my_resultregistration.html">활용성과등록</option>
+                                    </optgroup>
+                                    <option value="../maypage/my_answer.html">온라인상담 답변확인</option>
+                                    <option value="../maypage/my_personalinformation.html">개인정보변경</option>
+                                    <option value="../maypage/my_pasword.html">비밀번호변경</option>
+                                    <option value="../maypage/my_withdrawal.html">회원탈퇴신청</option>
+                                </select>
+                            </li>
+                            <!-- 분양담당자 로그인 시 -->
+                            <!-- <li class="gnb-wrap-mo__content__peson">
+                                <a href="javascript:;">분양담당자<span class="select-arrow"></span></a>
+                            </li> -->
+                            <!-- // 분양담당자 로그인 시 -->
+                            <li class="gnb-wrap-mo__content__logout">
+                                <a href="javascript:;"><span>로그아웃</span></a>
+                            </li>
+                        </ul>
+                        <!-- // 로그인 된 경우 -->
+                    </div>
+                    <div class="gnb-wrap-mo__content__menu-wrap">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">소개</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">한국인체자원은행</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../introduction/knb_background.html">배경</a>
+                                        </li>
+                                        <li >
+                                            <a href="../introduction/knb_history.html">연혁</a>
+                                        </li>
+                                        <li >
+                                            <a href="../introduction/knb_vision.html">비전 및 전략</a>
+                                        </li>
+                                        <li>
+                                            <a href="../introduction/knb_system.html">수행체계</a>
+                                        </li>
+                                        <li>
+                                            <a href="../introduction/knb_law.html">관련법률</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">한국인체자원은행 네트워크(KBN)</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../introduction/knb_info.html">KBN 구성현황</a>
+                                        </li>
+                                        <li>
+                                            <a href="../introduction/knb_prtal.html">KBN Portal</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">인체자원현황</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">수집현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../humanresource_status/collection_disease.html">질환별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/collection_humanbody.html">인체유래물별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/collection_organization.html">단위은행별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/collection_year.html">연도별</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">분양현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_disease.html">질환별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_humanbody.html">인체유래물별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_organization.html">단위은행별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_year.html">연도별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_tasklist.html">분양과제 목록</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">성과현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../humanresource_status/result_thesis.html">활용성과(논문)</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/result_patent.html">활용성과(특허)</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/result_research.html">주요우수연구성과</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/result_education.html">교육성과</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">인체자원검색</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../humanresource_search/humanresources_keyword.html">키워드 검색</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../humanresource_search/humanresources_disease.html">KCD질병분류 검색</a>
+                                    </h3>
+                                    <ul>
+                                        <li><a href="../humanresource_search/humanresources_disease.html">
+                                        빠른검색</a></li>
+                                        <li><a href="../humanresource_search/kcdSearch.html">단계별검색</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">분양신청</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">분양신청안내</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../sale_apply/saleapply_supportcenter.html">분양지원센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="../sale_apply/saleapply_way.html">신청방법</a>
+                                        </li>
+                                        <li>
+                                            <a href="../sale_apply/saleapply_form.html">관련서식</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../sale_apply/saleapply_write.html">분양신청서 작성</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../sale_apply/saleapply_onlinecounseling.html">온라인상담</a>
+                                    </h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">알림</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/notice_list.html">공지사항</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/data_list.html">자료실</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/notice_img_list.html">갤러리</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/faq_list.html">FAQ</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/related_sites.html">관련사이트</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/knb_contact.html">CONTACT US</a>
+                                    </h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // #header -->
+        <!-- #container -->
+        <div id="container" class="">
+            <div class="line_map">
+                <ul class="wrap">
+                    <li class="home_btn"><a href="javascript:void(0);"><img src="../../images/icon/icon_sub_home.png" alt=""></a></li>
+                    <li>
+                        <a href="javascript:void(0);">소개</a>
+                        <ul class="line_map_sub">
+                            <li><a href="../introduction/knb_background.html">소개</a></li>
+                            <li><a href="../humanresource_status/collection_disease.html">인체자원현황</a></li>
+                            <li><a href="../humanresource_search/humanresources_keyword.html">인체자원검색</a></li>
+                            <li><a href="../sale_apply/saleapply_way.html">분양신청</a></li>
+                            <li><a href="../notification/notice_list.html">알림</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">한국인체자원 네트워크(KBN)</a>
+                        <ul class="line_map_sub">
+                            <li><a href="knb_background.html">한국인체자원은행</a></li>
+                            <li><a href="knb_info.html">한국인체자원 네트워크(KBN)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- line_map -->
+            <h4 class="sub_tit">한국인체자원 네트워크(KBN)</h4>
+            <ul class="tab_box tap_w_2">
+                <li class="on"><a href="knb_info.html">KBN 구성현황</a></li>
+                <li><a href="knb_prtal.html">KBN Portal</a></li>
+            </ul>
+            <div class="contents_sub">
+                <div class="con_wrap inner">
+                    <h5 class="con_tit">
+                        <span><img src="../../images/icon/icon_introduction_07.png" /></span>
+                        <div class="con_tit_txt">
+                            <span class="font_type_bold">한국인체자원은행 네트워크</span>
+                        </div>
+                    </h5>
+                    <p>
+                      질병관리본부 국립중앙인체자원은행과 17개 대학병원 소재 인체자원단위은행이 함께 국가 인체자원은행 네트워크인 한국인체자원은행네트워크(KBN)를 구성하여, 대규모 인구집단 <br class="pc_br" />
+                      기반 (중앙은행) 및 질병 기반 (17개 단위은행) 인체자원을 수집, 관리하여 연구자들에게 제공하고 있으며, 2013년부터 국립마산병원과 한국원자력의학원이 KBN 협력병원으로 참여하고 있습니다. 
+                    </p>
+                    <div class="kbn_info_wrap">
+                        <div class="notify_box">
+                            ※ 아래의 해당 병원명을 클릭하시면 상세자료를 확인하실 수 있습니다.<br />
+                            ※ 해당자료는 2016년 12월말 기준으로 작성되었습니다.
+                        </div>
+                        <div class="kbn_info_map_wrap">
+                            <div class="kbn_info_map">
+                                <img src="../../images/content/knb_info_map.jpg">
+                                <p class="info_map_link map_link_01" ><a href="javascript:void(0);">강원대병원</a></p>
+                                <p class="info_map_link map_link_02 left" ><a href="javascript:void(0);">순천향대부천병원</a></p>
+                                <p class="info_map_link map_link_03  left" ><a href="javascript:void(0);">고려대구로병원</a></p>
+                                <p class="info_map_link map_link_04" ><a href="javascript:void(0);">서울대병원</a></p>
+                                <p class="info_map_link map_link_05" ><a href="javascript:void(0);">서울아산병원</a></p>
+                                <p class="info_map_link map_link_06" ><a href="javascript:void(0);">아주대병원</a></p>
+                                <p class="info_map_link map_link_07" ><a href="javascript:void(0);">충북대병원</a></p>
+                                <p class="info_map_link map_link_08" ><a href="javascript:void(0);">충남대병원</a></p>
+                                <p class="info_map_link map_link_09 left" ><a href="javascript:void(0);">원광대병원</a></p>
+                                <p class="info_map_link map_link_10" ><a href="javascript:void(0);">전북대병원</a></p>
+                                <p class="info_map_link map_link_11 left" ><a href="javascript:void(0);">경북대병원</a></p>
+                                <p class="info_map_link map_link_12" ><a href="javascript:void(0);">계명대동산병원</a></p>
+                                <p class="info_map_link map_link_13 left" ><a href="javascript:void(0);">화순전남대병원</a></p>
+                                <p class="info_map_link map_link_14 left" ><a href="javascript:void(0);">경상대병원</a></p>
+                                <p class="info_map_link map_link_15" ><a href="javascript:void(0);">부산대병원</a></p>
+                                <p class="info_map_link map_link_16" ><a href="javascript:void(0);">인제대부산백병원</a></p>
+                                <p class="info_map_link map_link_17" ><a href="javascript:void(0);">제주대병원</a></p>
+
+                                <p class="info_map_link map_link_18 top" ><a href="javascript:void(0);">한국원자력의학원</a></p>
+                                <p class="info_map_link map_link_19 top big" ><a href="javascript:void(0);">국립중앙인체자원은행</a></p>
+                                <p class="info_map_link map_link_20 top" ><a href="javascript:void(0);">국립마산병원</a></p>
+                            </div>
+                        </div>
+                        <!-- kbn_info_map_wrap -->
+                    </div>
+                    <!-- kbn_info_map -->
+                </div>  
+                <!-- con_wrap inner -->
+            </div>
+            <!-- contents_sub -->
+            
+            
+        </div>
+        <!-- // #container -->
+        <div class="footer_site">
+            <div class="footer_site_wrap">
+                <div><a <a href="http://www.cdc.go.kr/" target="black;"><img src="../../images/com/footer_site_logo_01.png" alt="질병관리본부" /></a></div>
+                <div><a href="http://koreabiobank.re.kr/" target="black;"><img src="../../images/com/footer_site_logo_02.png" alt="국립중앙인체자원은행" /></a></div>
+                <div><a href="https://www.catholic.ac.kr/index.do" target="black;"><img src="../../images/com/footer_site_logo_03.png" alt="가톨릭대학교" /></a></div>
+            </div>
+        </div>
+        <!-- //footer_site -->
+        <!-- #footer -->
+        <div id="footer">
+            <div class="footer-wrap">
+                <div class="footer-wrap__logo">
+                    <img src="../../images/com/foot_logo.gif" alt="KBN PORTAL" />
+                </div>
+                <div class="footer-wrap__address">
+                    <p class="address">서울시 서초구 반포대로 222 가톨릭대학교 서울성모병원 별관 (06591)<br />대표전화 : 02-6964-7377</p>
+                    <p class="copyright">COPYRIGHT &copy; 2019 THE CATHOLIC UNIVERSITY OF KOREA, SEOUL ST. MARY’S HOSPITAL. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="footer-wrap__today">
+                    <div class="visitor">
+                        <span class="title today">오늘 방문자 수</span><span class="count">80명</span>
+                    </div>
+                    <div class="visitor">
+                        <span class="title all">전체 방문자 수</span><span class="count">120,038명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // #footer -->
+        <!-- #PopUp
+       popup_bg에  on,
+       popup_wrap에 active 
+
+       **popup_map_link_01 에 클릭한 버튼과 같은 번호를 붙혀줘야 함
+    -->
+        <div class="popup_bg"></div>
+        <div id="PopUp">
+            <div class="popup_wrap popup_map_link_01">
+                <div class="popup_tit">
+                    <h4>강원대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_01.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>강원대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>강원도 춘천시 백령로 156 강원대학교병원<br/> 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>033-258-2107</span></li>
+                                    <li><p>이메일</p><span>knuhbiobank@knuh.or.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2009년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    180,512 바이알 수집(COPD, 치매, 림프계질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    78개 연구과제에 인체유래물 11,810 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    17편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_01 -->
+            <div class="popup_wrap popup_map_link_02">
+                <div class="popup_tit">
+                    <h4>순천향대부천병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_02.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>순천향대부천병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>경기도 부천시 원미구 조마루로 170 <br/>순천향대학교 부천병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span> 032-621-6305</span></li>
+                                    <li><p>이메일</p><span>biobank@schmc.ac.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   219,156 바이알 수집(알러지질환, 호흡기질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    154 연구과제에 인체유래물 30,340 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                   83편 논문 및 1건 특허 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_02 -->
+            <div class="popup_wrap popup_map_link_03">
+                <div class="popup_tit">
+                    <h4>고려대구로병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_03.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>고려대구로병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>서울특별시 구로구 구로동로 148 <br/>고려대학교 구로병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>02-2626-2409</span></li>
+                                    <li><p>이메일</p><span>gurobiobank@gmail.com</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2011년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    157,521 바이알 수집(각종 암(갑상선암, 간암, 폐암, 대장암 등),<br/> 심혈관질환, 신경계질환, 이비인후과계질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    116개 연구과제에 인체유래물 22,733 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    19편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_03 -->
+            <div class="popup_wrap popup_map_link_04">
+                <div class="popup_tit">
+                    <h4>서울대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_04.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>서울대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>서울특별시 종로구 대학로 101 서울대학교병원 <br/>의생명연구원 인체자원단위은행 4208호</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>02-2072-1717</span></li>
+                                    <li><p>이메일</p><span>snuhbiobank@gmail.com</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2010년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    658,469 바이알 수집(신장질환(사구체신염, 급성/만성 신부전 등) 내분비, 영양 및 대사질환, 근골격계질환, <br />
+                                    여성생식기 악성종양, 우울증, 심혈관질환(심방세동/조동))
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    170개 연구과제에 인체유래물 20,674 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    22편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_04 -->
+            <div class="popup_wrap popup_map_link_05">
+                <div class="popup_tit">
+                    <h4>서울아산병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_05.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>서울아산병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>서울특별시 송파구 올림픽로 43길 88 <br/>서울아산병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>02-3010-4523</span></li>
+                                    <li><p>이메일</p><span>asan-brc@amc.seoul.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    288,693 바이알 수집(20여개의 장기에서 발생하는 각종 암)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    212개 연구과제에 인체유래물 22,413 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    43편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_05 -->
+            <div class="popup_wrap popup_map_link_06">
+                <div class="popup_tit">
+                    <h4>아주대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_06.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>아주대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>경기도 수원시 영통구 월드컵로 164 <br/>아주대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>031-219-4383</span></li>
+                                    <li><p>이메일</p><span>gastrolab@hanmail.net</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2011년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   361,555 바이알 수집(간 및 소화기계 질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   134개 연구과제에 인체유래물 25,688 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    35편 논문 및 1건 특허 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_06 -->
+            <div class="popup_wrap popup_map_link_07">
+                <div class="popup_tit">
+                    <h4>충북대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_07.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>충북대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>충청북도 청주시 서원구 1 순환로 776 <br/>충북대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>043-269-6264</span></li>
+                                    <li><p>이메일</p><span>cbnubiobank@hanmail.net</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2009년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   324,635 바이알 수집(말기암, 만성질환 및 퇴행성질환, 심혈관질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   95개 연구과제에 인체유래물 13,342 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    38편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_07 -->
+            <div class="popup_wrap popup_map_link_08">
+                <div class="popup_tit">
+                    <h4>충남대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_08.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>충남대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>대전광역시 중구 문화로 282 <br/>충남대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>042-280-8487</span></li>
+                                    <li><p>이메일</p><span>biscuit@cnuh.co.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행, 국립중앙인체자원은행 백업은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    270,181 바이알 수집(노인성질환, 심혈관질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    191개 연구과제에 인체유래물 25,631 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    41편 논문 및 16건 특허 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_08 -->
+            <div class="popup_wrap popup_map_link_09">
+                <div class="popup_tit">
+                    <h4>원광대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_09.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>원광대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>전라북도 익산시 무왕로 895<br/>원광대학교 의과대학병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>063-859-1816</span></li>
+                                    <li><p>이메일</p><span>wonbio@wkuh.org</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2009년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   132,793 바이알 수집 <br />
+                                  (소화기계, 호흡기계, 근골격계, 면역계질환, 종양성 질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    74개 연구과제에 인체유래물 11,629 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    33편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_09 -->
+            <div class="popup_wrap popup_map_link_10">
+                <div class="popup_tit">
+                    <h4>전북대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_10.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>전북대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>전라북도 전주시 덕진구 건지로 20<br/>전북대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>063-250-2570</span></li>
+                                    <li><p>이메일</p><span>jbnubiobank@hanmail.net</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    332,813 바이알 수집<br />
+                                    (소화기계암, 내분비계암, 조현병, 쯔쯔가무시병 등 비종양성질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    112개 연구과제에 인체유래물 17,082 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    32편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_10 -->
+            <div class="popup_wrap popup_map_link_11">
+                <div class="popup_tit">
+                    <h4>경북대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_11.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>경북대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>대구광역시 중구 동덕로 130<br/>경북대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>053-200-6742</span></li>
+                                    <li><p>이메일</p><span>knuhbiobank@knu.ac.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    411,954 바이알 수집<br/>(7대 주요 암, 만성질환 및 심혈관질환, 난치성노인병)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   153개 연구과제에 인체유래물 32,711 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                   62편 논문 및 2건 특허생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_11 -->
+            <div class="popup_wrap popup_map_link_12">
+                <div class="popup_tit">
+                    <h4>계명대동산병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_12.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>계명대동산병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>대구광역시 중구 달성로 56<br/>계명대학교 동산병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>053-250-7756</span></li>
+                                    <li><p>이메일</p><span>biobank@dsmc.or.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2009년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    400,192 바이알 수집<br />
+                                   (주요 암(예, 간암), 간담도질환, 비뇨생식계질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   153개 연구과제에 인체유래물 20,781 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    34편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_12 -->
+            <div class="popup_wrap popup_map_link_13">
+                <div class="popup_tit">
+                    <h4>화순전남대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_13.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>화순전남대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>전라남도 화순군 화순읍 서양로 322<br/>화순전남대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>061-379-7704</span></li>
+                                    <li><p>이메일</p><span>cnuhhbiobank@naver.com</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행, 국립중앙인체자원은행 백업은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   391,048 바이알 수집(한국인 호발 암(예, 유방암, 폐암, 대장암, 백혈병)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   155개 연구과제에 인체유래물 23,156 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    53편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_13 -->
+            <div class="popup_wrap popup_map_link_14">
+                <div class="popup_tit">
+                    <h4>경상대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_14.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>경상대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>경상남도 진주시 강남로 79<br/>경상대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>055-750-9256</span></li>
+                                    <li><p>이메일</p><span>biobank@gnu.ac.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   1,495,201 바이알 수집<br/>(신생아, 소아청소년, 관상동맥, 소화기 및 감염계통질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   121개 연구과제에 인체유래물 22,058 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    41편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_14 -->
+            <div class="popup_wrap popup_map_link_15">
+                <div class="popup_tit">
+                    <h4>부산대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_15.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>부산대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>부산광역시 서구 구덕로 179<br/>부산대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>051-240-7055</span></li>
+                                    <li><p>이메일</p><span>pnuhbiobank@hanmail.net</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행, 국립중앙인체자원은행 백업은행 | 2008년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   549,532 바이알 수집<br />
+                                    (주요 암(예, 위암, 유방암, 갑상샘암, 대장암), 간염, 심혈관질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    194개 연구과제에 인체유래물 23,559 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    59편 논문 및 4건 특허 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_15 -->
+            <div class="popup_wrap popup_map_link_16">
+                <div class="popup_tit">
+                    <h4>인제대부산백병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_16.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>인제대부산백병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>부산광역시 부산진구 복지로 75<br/>인제대학교 부산백병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>051-890-8659</span></li>
+                                    <li><p>이메일</p><span>biobank@paik.ac.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2011년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    342,406 바이알 수집(주요 암(예, 유방암, 혈액암, 갑상선암, 대장암, 위암, 자궁암, 폐암 등),<br/> 조혈기관 질환, 말기 신장 질환의 신장이식 및 기타 비종양성 신장 질환)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                   96개 연구과제에 인체유래물 9,277 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    18편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_16 -->
+            <div class="popup_wrap popup_map_link_17">
+                <div class="popup_tit">
+                    <h4>제주대병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_17.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>제주대병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>제주특별자치도 제주시 아란 13길 15<br/>제주대학교병원 인체자원단위은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>064-717-1512</span></li>
+                                    <li><p>이메일</p><span>hjn129@naver.com</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    인체자원단위은행 | 질병 기반 인체자원은행 | 2011년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    87,235 바이알 수집(위암, 대장암, 폐암, 유방암, 간담췌암, 갑상샘암,<br/> 림프종 등의 고형암, 조혈계암, 만성질환, 유전질환, 건강대조군)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    42개 연구과제에 인체유래물 8,035 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    22편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_17 -->
+            <div class="popup_wrap popup_map_link_18 top">
+                <div class="popup_tit">
+                    <h4>한국원자력의학원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_18.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>한국원자력의학원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>서울특별시 노원구 노원로 75 <br/>한국원자력 의학원 국가방사선혈액자원은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>02-970-1645</span></li>
+                                    <li><p>이&nbsp;&nbsp;메&nbsp;&nbsp;일</p><span>krb_biobank@kirams.re.kr</span></li>
+                                    <li><p>홈페이지</p><a href="http://www.krb.re.kr" target="_blank"><span>http://www.krb.re.kr</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    KBN 협력병원 | 혈액자원은행 | 2013년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                   3만2천 명 분<br/>(방사선작업종사자, 방사선치료암환자, 정상인, 유방암, 갑상선암, 대장암, 폐암, 위암환자 등)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    32개 연구과제에 2천8백 바이알 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    10편 논문 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_18 top-->
+            <div class="popup_wrap popup_map_link_19 top big">
+                <div class="popup_tit">
+                    <h4>국립중앙인체자원은행</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_19.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>국립중앙인체자원은행</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>충청북도 청주시 흥덕구 오송읍 오송생명2로 200</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>043-719-6520</span></li>
+                                    <li><p>이메일</p><span>biobank@korea.kr</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형</p>
+                                <div>
+                                    국립중앙인체자원은행, 인체자원단위은행 운영 지원 | 대규모 인구집단 기반 인체자원은행
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    39만 5천명분 수집<br/>(질병관리본부 코호트 사업 및 국민건강영양조사사업 등 대규모 인구집단 기반 자원)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    518개 연구과제에 인체유래물 43만 바이알, <br/>유전정보 및 역학정보 각각 557건, 788건 분양
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    453편 논문 및 28건 특허 생산
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_19 top big-->
+            <div class="popup_wrap popup_map_link_20 top">
+                <div class="popup_tit">
+                    <h4>국립마산병원</h4>
+                    <a href="javascript:void(0);" class="popup_closs_btn">닫기</a>
+                </div>
+                <!-- popup_tit -->
+                <div class="popup_content popup_kbninfo">
+                    <div class="kbninfo_top">
+                        <p><img src="../../images/content/popup_kbninfo_20.jpg"></p>
+                        <div class="kbninfo_hospital">
+                            <h5>국립마산병원</h5>
+                            <div class="kbninfo_address">
+                                <p>주&nbsp;&nbsp;&nbsp;&nbsp;소</p>
+                                <span>경남 창원시 마산합포구 가포로 215<br/>국립마산병원 결핵자원은행</span>
+                            </div>
+                            <div class="kbninfo_contact">
+                                <ul>
+                                    <li><p>전&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화</p><span>055-246-5626</span></li>
+                                    <li><p>이&nbsp;&nbsp;메&nbsp;&nbsp;일</p><span>mnthtbbank@korea.kr</span></li>
+                                    <li><p>홈페이지</p><a href="http://www.mnth.go.kr" target="_blank"><span>http://www.mnth.go.kr</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- kbninfo_hospital -->
+                    </div>
+                    <!-- kbninfo_top -->
+                    <div class="kbninfo_bottom">
+                        <ul class="list_type02">
+                            <li>
+                                <p class="list_type02_tit">역할 | 은행유형 | 지정년도</p>
+                                <div>
+                                    KBN 협력병원 | 결핵검체은행 | 2013년
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 보유현황</p>
+                                <div>
+                                    객담: 9,388개, 혈청: 7,108개, 소변: 2,162개,<br/> 결핵균주: 5,000주 이상(2009~2016년도)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 분양 현황</p>
+                                <div>
+                                    객담: 772개, 혈청: 100개, 소변: 400개,<br/>결핵균주: 1,910주, 11개 연구과제(2009~2016년)
+                                </div>
+                            </li>
+                            <li>
+                                <p class="list_type02_tit">인체자원 활용성과</p>
+                                <div>
+                                    포스터 11개 발표
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- kbninfo_bottom -->
+                </div>
+                <!-- popup_content -->
+            </div>
+            <!-- popup_map_link_20 top-->
+
+        </div>
+        <!-- //#PopUp -->
+
+    </div>
+</body>
+</html>

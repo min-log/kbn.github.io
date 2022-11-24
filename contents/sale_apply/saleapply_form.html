@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- link 공통 -->
+    <link href="../../css/com/resset.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/com/common.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/com/common_media.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/subpage/sub.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/subpage/sub_media.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- plugin_css 공통 -->
+    <link href="../../css/plugin/slick.css" rel="stylesheet" type="text/css"/>
+
+    <!-- script 공통 -->
+    <script src="../../js/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    
+    <!-- plugin_js 공통 -->
+   <script src="../../js/plugin/slick.min.js" type="text/javascript"></script>
+
+    <!-- content script -->
+    <script src="../../js/jquery_ui/common.js?ver=20190821" type="text/javascript"></script>
+    <script src="../../js/jquery_ui/sub.js" type="text/javascript"></script>
+    
+    <title>KBN PORTAL | </title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- #header -->
+        <div id="header">
+            <div class="header-wrap">
+                <div class="header-wrap__content">
+                    <div class="header-wrap__select language-select">
+                        <a href="javascript:;" class="header-wrap__select__title">LANGUAGE<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../../index.html">KOREAN</a></li>
+                            <li><a href="../../eng/index.html">ENGLISH</a></li>
+                        </ul>
+                    </div>
+                    <h1 class="header-wrap__content__logo">
+                        <a href="../../index.html" title="KBN PORTAL 메인으로 이동"><img src="../../images/com/head_logo.gif" alt="KBN PORTAL" /></a>
+                    </h1>
+                    <!-- 일반회원 로그인시 노출 -->
+                    <!-- <div class="header-wrap__select person-select">
+                        <a href="javascript:;" class="header-wrap__select__title">마이페이지<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../maypage/my_storage.html">관심자원 보관함</a></li>
+                            <li><a href="../maypage/my_sale.html">분양현황</a></li>
+                            <li><a href="../maypage/my_answer.html">온라인상담 답변확인</a></li>
+                            <li><a href="../maypage/my_personalinformation.html">개인정보변경</a></li>
+                            <li><a href="../maypage/my_pasword.html">비밀번호변경</a></li>
+                            <li><a href="../maypage/my_withdrawal.html">회원탈퇴신청</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- // 일반회원 로그인시 노출 -->
+                    <!-- 분양담당자 로그인시 노출 -->
+                    <!-- <div class="header-wrap__select person-select">
+                        <a href="javascript:;" class="header-wrap__select__title">분양담당자<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../maypage/admin_onlinemanagement.html">온라인상담관리</a></li>
+                            <li><a href="../maypage/admin_oapplication.html">분양신청관리</a></li>
+                            <li><a href="../maypage/admin_deliberation.html">분양심의관리</a></li>
+                            <li><a href="../maypage/admin_registration.html">분양등록</a></li>
+                            <li><a href="../maypage/admin_close.html">활용종료</a></li>
+                            <li><a href="../maypage/admin_statistics.html">통계</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- // 분양담당자 로그인시 노출 -->
+                    <div class="header-wrap__content__login-out">
+                        <a href="../maypage/login.html" title="로그인" class="login">로그인</a>
+                        <!-- 로그인시 노출 -->
+                        <!-- <a href="javascript:;" title="로그아웃" class="logout">로그아웃</a> -->
+                        <!-- // 로그인시 노출 -->
+                    </div>
+                    <div class="header-wrap__content__mo-btn">
+                        <a href="javascript:;">
+                            <img src="../../images/icon/icon_menu.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-wrap">
+                <div class="gnb-wrap__content">
+                    <em id="gnbLine"></em>
+                    <ul class="gnb-wrap__content__menu">
+                        <li><a href="javascript:;">소개</a></li>
+                        <li><a href="javascript:;">인체자원현황</a></li>
+                        <li><a href="javascript:;">인체자원검색</a></li>
+                        <li><a href="javascript:;">분양신청</a></li>
+                        <li><a href="javascript:;">알림</a></li>
+                    </ul>
+                </div>
+                <div class="gnb-wrap__subgnb-wrap">
+                    <div class="gnb-wrap__subgnb-wrap__content-wrap">
+                        <div class="gnb-wrap__subgnb-wrap__content">
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu01">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">소개</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">한국인체자원은행</a>
+                                            <ul>
+                                                <li><a href="../introduction/knb_background.html">배경</a></li>
+                                                <li><a href="../introduction/knb_history.html">연혁</a></li>
+                                                <li><a href="../introduction/knb_vision.html">비전 및 전략</a></li>
+                                                <li><a href="../introduction/knb_system.html">수행체계</a></li>
+                                                <li><a href="../introduction/knb_law.html">관련법률</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">한국인체자원은행<br />네트워크(KBN)</a>
+                                            <ul>
+                                                <li><a href="../introduction/knb_info.html">KBN 구성현황</a></li>
+                                                <li><a href="../introduction/knb_prtal.html">KBN Portal</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu02">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">인체자원현황</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">수집현황</a>
+                                            <ul>
+                                                <li><a href="../humanresource_status/collection_disease.html">질환별</a></li>
+                                                <li><a href="../humanresource_status/collection_humanbody.html">인체유래물별</a></li>
+                                                <li><a href="../humanresource_status/collection_organization.html">단위은행별</a></li>
+                                                <li><a href="../humanresource_status/collection_year.html">연도별</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">분양현황</a>
+                                            <ul>
+                                                <li><a href="../humanresource_status/salestatus_disease.html">질환별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_humanbody.html">인체유래물별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_organization.html">단위은행별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_year.html">연도별</a></li>
+                                                <li><a href="../humanresource_status/salestatus_tasklist.html">분양과제목록</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">성과현황</a>
+                                            <ul>
+                                                <li><a href="../humanresource_status/result_thesis.html">활용성과(논문)</a></li>
+                                                <li><a href="../humanresource_status/result_patent.html">활용성과(특허)</a></li>
+                                                <li><a href="../humanresource_status/result_research.html">주요우수연구성과</a></li>
+                                                <li><a href="../humanresource_status/result_education.html">교육성과</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu03">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">인체자원검색</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="../humanresource_search/humanresources_keyword.html">키워드 검색</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../humanresource_search/humanresources_disease.html">KCD질병분류 검색</a>
+                                            <ul>
+                                                <li><a href="../humanresource_search/humanresources_disease.html">
+                                                빠른검색</a></li>
+                                                <li><a href="../humanresource_search/kcdSearch.html">단계별검색</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu04">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">분양신청</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">분양신청안내</a>
+                                            <ul>
+                                                <li><a href="../sale_apply/saleapply_supportcenter.html">분양지원센터</a></li>
+                                                <li><a href="../sale_apply/saleapply_way.html">신청방법</a></li>
+                                                <li><a href="../sale_apply/saleapply_form.html">관련서식</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../sale_apply/saleapply_write.html">분양신청서 작성</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../sale_apply/saleapply_onlinecounseling.html">온라인상담</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu05">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">알림</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="../notification/notice_list.html">공지사항</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/data_list.html">자료실</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/notice_img_list.html">갤러리</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/faq_list.html">FAQ</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/related_sites.html">관련사이트</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="../notification/knb_contact.html">CONTACT US</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-wrap-mo">
+                <h2 class="gnb-wrap-mo__title">
+                    전체메뉴
+
+                    <div class="header-wrap__select language-select">
+                        <a href="javascript:;" class="header-wrap__select__title">LANGUAGE<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="../../index.html">KOREAN</a></li>
+                            <li><a href="../../eng/index.html">ENGLISH</a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:;"><img src="../../images/icon/icon_close_white.png" alt="" /></a>
+                </h2>
+                <div class="gnb-wrap-mo__content">
+                    <div class="gnb-wrap-mo__content__top">
+                        <!-- 로그인 안된 경우 -->
+                        <!-- <ul>
+                            <li class="gnb-wrap-mo__content__login">
+                                <a href="javascript:;">로그인</a>
+                            </li>
+                        </ul> -->
+                        <!-- // 로그인 안된 경우 -->
+                        <!-- 로그인 된 경우 -->
+                        <ul>
+                            <li class="gnb-wrap-mo__content__peson">
+                                <a href="javascript:void(0);">마이페이지<span class="select-arrow"></span></a>
+                                <select onchange="if(this.value) location.href=(this.value);">
+                                    <option value="/contents/maypage/my_storage.html">관심자원 보관함</option>
+                                    <optgroup label="분양현황">
+                                        <option value="../maypage/my_sale.html">분양현황조회</option>
+                                        <option value="../maypage/my_resultregistration.html">활용성과등록</option>
+                                    </optgroup>
+                                    <option value="../maypage/my_answer.html">온라인상담 답변확인</option>
+                                    <option value="../maypage/my_personalinformation.html">개인정보변경</option>
+                                    <option value="../maypage/my_pasword.html">비밀번호변경</option>
+                                    <option value="../maypage/my_withdrawal.html">회원탈퇴신청</option>
+                                </select>
+                            </li>
+                            <!-- 분양담당자 로그인 시 -->
+                            <!-- <li class="gnb-wrap-mo__content__peson">
+                                <a href="javascript:;">분양담당자<span class="select-arrow"></span></a>
+                            </li> -->
+                            <!-- // 분양담당자 로그인 시 -->
+                            <li class="gnb-wrap-mo__content__logout">
+                                <a href="javascript:;"><span>로그아웃</span></a>
+                            </li>
+                        </ul>
+                        <!-- // 로그인 된 경우 -->
+                    </div>
+                    <div class="gnb-wrap-mo__content__menu-wrap">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">소개</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">한국인체자원은행</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../introduction/knb_background.html">배경</a>
+                                        </li>
+                                        <li >
+                                            <a href="../introduction/knb_history.html">연혁</a>
+                                        </li>
+                                        <li >
+                                            <a href="../introduction/knb_vision.html">비전 및 전략</a>
+                                        </li>
+                                        <li>
+                                            <a href="../introduction/knb_system.html">수행체계</a>
+                                        </li>
+                                        <li>
+                                            <a href="../introduction/knb_law.html">관련법률</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">한국인체자원은행 네트워크(KBN)</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../introduction/knb_info.html">KBN 구성현황</a>
+                                        </li>
+                                        <li>
+                                            <a href="../introduction/knb_prtal.html">KBN Portal</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">인체자원현황</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">수집현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../humanresource_status/collection_disease.html">질환별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/collection_humanbody.html">인체유래물별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/collection_organization.html">단위은행별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/collection_year.html">연도별</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">분양현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_disease.html">질환별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_humanbody.html">인체유래물별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_organization.html">단위은행별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_year.html">연도별</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/salestatus_tasklist.html">분양과제 목록</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">성과현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../humanresource_status/result_thesis.html">활용성과(논문)</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/result_patent.html">활용성과(특허)</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/result_research.html">주요우수연구성과</a>
+                                        </li>
+                                        <li>
+                                            <a href="../humanresource_status/result_education.html">교육성과</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">인체자원검색</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../humanresource_search/humanresources_keyword.html">키워드 검색</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../humanresource_search/humanresources_disease.html">KCD질병분류 검색</a>
+                                    </h3>
+                                    <ul>
+                                        <li><a href="../humanresource_search/humanresources_disease.html">
+                                        빠른검색</a></li>
+                                        <li><a href="../humanresource_search/kcdSearch.html">단계별검색</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">분양신청</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">분양신청안내</a>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="../sale_apply/saleapply_supportcenter.html">분양지원센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="../sale_apply/saleapply_way.html">신청방법</a>
+                                        </li>
+                                        <li>
+                                            <a href="../sale_apply/saleapply_form.html">관련서식</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../sale_apply/saleapply_write.html">분양신청서 작성</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../sale_apply/saleapply_onlinecounseling.html">온라인상담</a>
+                                    </h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">알림</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/notice_list.html">공지사항</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/data_list.html">자료실</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/notice_img_list.html">갤러리</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/faq_list.html">FAQ</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/related_sites.html">관련사이트</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="../notification/knb_contact.html">CONTACT US</a>
+                                    </h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // #header -->
+        <!-- #container -->
+        <div id="container" class="">
+            <div class="line_map">
+                <ul class="wrap">
+                    <li class="home_btn"><a href="javascript:void(0);"><img src="../../images/icon/icon_sub_home.png" alt=""></a></li>
+                    <li>
+                        <a href="javascript:void(0);">분양신청</a>
+                        <ul class="line_map_sub">
+                            <li><a href="../introduction/knb_background.html">소개</a></li>
+                            <li><a href="../humanresource_status/collection_disease.html">인체자원현황</a></li>
+                            <li><a href="../humanresource_search/humanresources_keyword.html">인체자원검색</a></li>
+                            <li><a href="../sale_apply/saleapply_way.html">분양신청</a></li>
+                            <li><a href="../notification/notice_list.html">알림</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">분양신청안내</a>
+                        <ul class="line_map_sub">
+                            <li><a href="saleapply_way.html">분양신청안내</a></li>
+                            <li><a href="saleapply_write.html">분양신청서 작성</a></li>
+                            <li><a href="saleapply_onlinecounseling.html">온라인상담</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- line_map -->
+
+            <h4 class="sub_tit">분양신청안내</h4>
+            <ul class="tab_box tap_w_3">
+                <li><a href="saleapply_supportcenter.html">분양지원센터</a></li>
+                <li><a href="saleapply_way.html">신청방법</a></li>
+                <li class="on"><a href="saleapply_form.html">관련서식</a></li>
+            </ul>
+            <div class="contents_sub inner">
+                <h5 class="con_tit">
+                    <span><img src="../../images/icon/icon_introduction_11.png" /></span>
+                    <div class="con_tit_txt">
+                        <span class="font_type_bold">관련서식</span>
+                    </div>
+                </h5>
+                <div class="saleapply_form">
+                    <div class="btn_down">
+                        <a class="green" href="javascript:void(0);">전체서식 다운로드</a><a class="gray" href="javascript:void(0);">선택서식 다운로드</a>
+                    </div>
+                    <div class="saleapply_form_list">
+                        <div>
+                            <input id="FormDown_01" type="checkbox" name="SaleapplyFormDown">
+                            <label for="FormDown_01">
+                                <p class="formdown_tit"><img src="../../images/icon/saleapply_way_document.png">분양신청</p>
+                                <div class="formdown_con">
+                                    <div>
+                                        <span>서식</span>
+                                        <ul>
+                                            <li>1. 온라인 분양신청서 </li>
+                                            <li>2. 기관 생명윤리위원회(IRB) <br/>&nbsp;&nbsp;&nbsp;&nbsp;심의 결과서</li>
+                                            <li>3. 연구계획서</li>
+                                            <li>4. 인체자원이용계획서</li>
+                                            <li>5. 서약서</li>
+                                            <li>6. 개인정보 수집〮 이용동의서</li>
+                                        </ul>
+                                    </div>
+                                    <div></div>
+                                </div>
+
+                            </label>
+                        </div>
+                        <div>
+                            <input id="FormDown_02" type="checkbox" name="SaleapplyFormDown">
+                            <label for="FormDown_02">
+                                <p class="formdown_tit"><img src="../../images/icon/saleapply_way_document.png">자원수령</p>
+                                <div class="formdown_con">
+                                    <div>
+                                        <span>서식</span>
+                                        <ul>
+                                            <li>1. 인체자원분양협약서</li>
+                                            <li>2. 인체자원수령확인서</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span>내용</span>
+                                        <ul>
+                                            <li>분양자원은 직접 수령을 원칙으로 <br class="mo_br" />
+                                            하며, 자원 인수 시 작성</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input id="FormDown_03" type="checkbox" name="SaleapplyFormDown">
+                            <label for="FormDown_03">
+                                <p class="formdown_tit"><img src="../../images/icon/saleapply_way_document.png">이의신청</p>
+                                <div class="formdown_con">
+                                    <div>
+                                        <span>서식</span>
+                                        <ul>
+                                            <li>심의결과이의 신청서</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span>내용</span>
+                                        <ul>
+                                            <li>분양심의에 이의가 있을 경우 제출</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input id="FormDown_04" type="checkbox" name="SaleapplyFormDown">
+                            <label for="FormDown_04">
+                                <p class="formdown_tit"><img src="../../images/icon/saleapply_way_document.png">변경신청</p>
+                                <div class="formdown_con">
+                                    <div>
+                                        <span>서식</span>
+                                        <ul>
+                                            <li>인체자원이용계획변경신청서</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span>내용</span>
+                                        <ul>
+                                            <li>사용 내용</li>
+                                            <li>(목적변경 및 기간 연장 등)</li>
+                                            <li>변경의 경우 제출</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input id="FormDown_05" type="checkbox" name="SaleapplyFormDown">
+                            <label for="FormDown_05">
+                                <p class="formdown_tit"><img src="../../images/icon/saleapply_way_document.png">성과등록이용종료</p>
+                                <div class="formdown_con">
+                                    <div>
+                                        <span>서식</span>
+                                        <ul>
+                                            <li>1. 인체자원이용성과보고서</li>
+                                            <li>2. 인체자원이용종료 및 <br />&nbsp;&nbsp;&nbsp;&nbsp;폐기확인서</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span>내용</span>
+                                        <ul>
+                                            <li>사용기간 만료된 자원은 즉시 <br class="mo_br" />
+                                                폐기 후 활용기간 만료일로부터 <br class="mo_br" />30일 이내에 제출</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- saleapply_form_list -->
+                    
+                </div>
+             
+               
+                    
+         
+                
+            </div>
+            <!-- contents_sub -->
+            
+            
+        </div>
+        <!-- // #container -->
+        <div class="footer_site">
+            <div class="footer_site_wrap">
+                <div><a <a href="http://www.cdc.go.kr/" target="black;"><img src="../../images/com/footer_site_logo_01.png" alt="질병관리본부" /></a></div>
+                <div><a href="http://koreabiobank.re.kr/" target="black;"><img src="../../images/com/footer_site_logo_02.png" alt="국립중앙인체자원은행" /></a></div>
+                <div><a href="https://www.catholic.ac.kr/index.do" target="black;"><img src="../../images/com/footer_site_logo_03.png" alt="가톨릭대학교" /></a></div>
+            </div>
+        </div>
+        <!-- //footer_site -->
+        <!-- #footer -->
+        <div id="footer">
+            <div class="footer-wrap">
+                <div class="footer-wrap__logo">
+                    <img src="../../images/com/foot_logo.gif" alt="KBN PORTAL" />
+                </div>
+                <div class="footer-wrap__address">
+                    <p class="address">서울시 서초구 반포대로 222 가톨릭대학교 서울성모병원 별관 (06591)<br />대표전화 : 02-6964-7377</p>
+                    <p class="copyright">COPYRIGHT &copy; 2019 THE CATHOLIC UNIVERSITY OF KOREA, SEOUL ST. MARY’S HOSPITAL. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="footer-wrap__today">
+                    <div class="visitor">
+                        <span class="title today">오늘 방문자 수</span><span class="count">80명</span>
+                    </div>
+                    <div class="visitor">
+                        <span class="title all">전체 방문자 수</span><span class="count">120,038명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // #footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://grutech.iptime.org:7111/kbn/search/clinicalInformation.do -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- link 공통 -->
+    <link href="../../css/com/resset.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/com/common.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/com/common_media.css?ver=20190821" rel="stylesheet" type="text/css"/>
+    <link href="../../css/subpage/sub.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/subpage/sub_media.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- plugin_css 공통 -->
+    <link href="../../css/plugin/slick.css" rel="stylesheet" type="text/css"/>
+    <!-- script 공통 -->
+    <script src="../../js/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    
+    <!-- plugin_js 공통 -->
+   <script src="../../js/plugin/slick.min.js" type="text/javascript"></script>
+    <!-- 차트 -->
+    <script src="../../js/plugin/echarts.min.js"></script>
+
+    <!-- content script -->
+    <script src="../../js/jquery_ui/common.js?ver=20190821" type="text/javascript"></script>
+    <script src="../../js/jquery_ui/sub.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+function fn_goPage(url){
+	location.href = ''+url;
+}
+
+function fn_chkMobile(url){
+	var UserAgent = navigator.userAgent;
+	if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null 
+			|| UserAgent.match(/LG|SAMSUNG|Samsung/) != null){
+		alert("PC에서 이용해주세요");
+		return false;
+	}else{
+		location.href = ''+url;
+	}
+}
+
+
+function fn_login(){
+	fn_checkUserIdSave();
+	if( fn_chkValidation('loginForm') == true ){
+		$("#loginForm").attr("action", "/kbn/login/loginProc.do");
+		$("#loginForm").submit();
+	}
+}
+
+function fn_attachDownload(p_attachId){
+	$('#downForm input[name=p_attachId]').val(p_attachId);
+	
+	$("#downForm").attr("action", "/kbn/common/downloadFile.do");
+	$("#downForm").submit();
+}
+
+function fn_checkUserIdSave(){
+	 if($("input[name=saveId]").is(":checked")){
+         setCookie("knbUserLogin", $("input[name=userLogin]").val(), 30); 
+     }else{
+         deleteCookie("knbUserLogin");
+     }
+}
+function setCookie(cookieName, value, exdays){
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+    document.cookie = cookieName + "=" + cookieValue;
+}
+ 
+function deleteCookie(cookieName){
+    var expireDate = new Date();
+    expireDate.setDate(expireDate.getDate() - 1);
+    document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+}
+ 
+function getCookie(cookieName) {
+    cookieName = cookieName + '=';
+    var cookieData = document.cookie;
+    var start = cookieData.indexOf(cookieName);
+    var cookieValue = '';
+    if(start != -1){
+        start += cookieName.length;
+        var end = cookieData.indexOf(';', start);
+        if(end == -1)end = cookieData.length;
+        cookieValue = cookieData.substring(start, end);
+    }
+    return unescape(cookieValue);
+}
+</script>   
+    <title>KBN PORTAL  </title>
+</head>
+<body style="">
+    <div id="wrap">
+<!-- top -->
+
+
+
+
+
+
+<!-- top start -->
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- link 공통 -->
+    <link href="./KBN PORTAL_files/resset.css" rel="stylesheet" type="text/css">
+    <link href="./KBN PORTAL_files/common.css" rel="stylesheet" type="text/css">
+    <link href="./KBN PORTAL_files/common_media.css" rel="stylesheet" type="text/css">
+	
+    <!-- 메인이면 호출  -->
+    <link href="./KBN PORTAL_files/main.css" rel="stylesheet" type="text/css">
+    <link href="./KBN PORTAL_files/main_media.css" rel="stylesheet" type="text/css">
+	<!-- 메인이 아니면 호출 -->
+	<link href="./KBN PORTAL_files/sub.css" rel="stylesheet" type="text/css">
+	<link href="./KBN PORTAL_files/sub_media.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="./KBN PORTAL_files/jquery-ui.min.css">
+    
+    <!-- plugin_css 공통 -->
+    <link href="./KBN PORTAL_files/slick.css" rel="stylesheet" type="text/css">
+    <!-- script 공통 -->
+    <script src="./KBN PORTAL_files/jquery-1.10.1.min.js.다운로드" type="text/javascript"></script>
+    <script src="./KBN PORTAL_files/jquery-ui-1.10.3.custom.min.js.다운로드" type="text/javascript"></script>
+    
+    <!-- plugin_js 공통 -->
+   <script src="./KBN PORTAL_files/slick.min.js.다운로드" type="text/javascript"></script>
+    
+    <!-- content script -->
+    <script src="./KBN PORTAL_files/common.js.다운로드" type="text/javascript"></script>
+   	<script src="./KBN PORTAL_files/main.js.다운로드" type="text/javascript"></script>
+	<script src="./KBN PORTAL_files/sub.js.다운로드" type="text/javascript"></script>
+
+   	<script src="./KBN PORTAL_files/search.js.다운로드" type="text/javascript"></script>
+	<script src="./KBN PORTAL_files/kbn.js.다운로드"></script>
+	<script src="./KBN PORTAL_files/common.js(1).다운로드"></script>
+
+	<!-- 인체자원현황에서 호출 -->
+	<script src="./KBN PORTAL_files/echarts.min.js.다운로드"></script>
+	<script type="text/javascript" src="./KBN PORTAL_files/loader.js.다운로드"></script>
+	
+
+
+<script type="text/javascript">
+
+function fn_goPage(url){
+	location.href = ''+url;
+}
+
+function fn_chkMobile(url){
+	var UserAgent = navigator.userAgent;
+	if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null 
+			|| UserAgent.match(/LG|SAMSUNG|Samsung/) != null){
+		alert("PC에서 이용해주세요");
+		return false;
+	}else{
+		location.href = ''+url;
+	}
+}
+
+
+function fn_login(){
+	fn_checkUserIdSave();
+	if( fn_chkValidation('loginForm') == true ){
+		$("#loginForm").attr("action", "/kbn/login/loginProc.do");
+		$("#loginForm").submit();
+	}
+}
+
+function fn_attachDownload(p_attachId){
+	$('#downForm input[name=p_attachId]').val(p_attachId);
+	
+	$("#downForm").attr("action", "/kbn/common/downloadFile.do");
+	$("#downForm").submit();
+}
+
+function fn_checkUserIdSave(){
+	 if($("input[name=saveId]").is(":checked")){
+         setCookie("knbUserLogin", $("input[name=userLogin]").val(), 30); 
+     }else{
+         deleteCookie("knbUserLogin");
+     }
+}
+function setCookie(cookieName, value, exdays){
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+    document.cookie = cookieName + "=" + cookieValue;
+}
+ 
+function deleteCookie(cookieName){
+    var expireDate = new Date();
+    expireDate.setDate(expireDate.getDate() - 1);
+    document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+}
+ 
+function getCookie(cookieName) {
+    cookieName = cookieName + '=';
+    var cookieData = document.cookie;
+    var start = cookieData.indexOf(cookieName);
+    var cookieValue = '';
+    if(start != -1){
+        start += cookieName.length;
+        var end = cookieData.indexOf(';', start);
+        if(end == -1)end = cookieData.length;
+        cookieValue = cookieData.substring(start, end);
+    }
+    return unescape(cookieValue);
+}
+</script>   
+    <title>KBN PORTAL  </title>
+
+
+    <div id="wrap"> <!-- top -->
+
+
+
+
+
+<!-- header start -->
+ <!-- #header -->
+        <div id="header">
+            <div class="header-wrap">
+                <div class="header-wrap__content">
+                    <div class="header-wrap__select language-select">
+                        <a href="javascript:;" class="header-wrap__select__title">LANGUAGE<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="javascript:;">KOREAN</a></li>
+                            <li><a href="javascript:alert(&#39;준비중입니다&#39;);">ENGLISH</a></li>
+                        </ul>
+                    </div>
+                    <h1 class="header-wrap__content__logo">
+                        <a href="http://grutech.iptime.org:7111/" title="KBN PORTAL 메인으로 이동"><img src="./KBN PORTAL_files/head_logo.gif" alt="KBN PORTAL"></a>
+                    </h1>
+                    <!-- 일반회원 로그인시 노출 -->
+                    
+                    <!-- // 일반회원 로그인시 노출 -->
+                    <!-- 분양담당자 로그인시 노출 -->
+                    <!-- <div class="header-wrap__select person-select">
+                        <a href="javascript:;" class="header-wrap__select__title">분양담당자<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="contents/maypage/admin_onlinemanagement.html">온라인상담관리</a></li>
+                            <li><a href="contents/maypage/admin_oapplication.html">분양신청관리</a></li>
+                            <li><a href="contents/maypage/admin_deliberation.html">분양심의관리</a></li>
+                            <li><a href="contents/maypage/admin_registration.html">분양등록</a></li>
+                            <li><a href="contents/maypage/admin_close.html">활용종료</a></li>
+                            <li><a href="contents/maypage/admin_statistics.html">통계</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- // 분양담당자 로그인시 노출 -->
+                    <div class="header-wrap__content__login-out">
+                    
+                        <a href="http://grutech.iptime.org:7111/kbn/login/login.do" title="로그인" class="login">로그인</a>
+                    
+                    
+                    </div>
+                    <div class="header-wrap__content__mo-btn">
+                        <a href="javascript:;">
+                            <img src="./KBN PORTAL_files/icon_menu.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-wrap">
+                <div class="gnb-wrap__content">
+                    <em id="gnbLine"></em>
+                    <ul class="gnb-wrap__content__menu">
+                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=background">소개</a></li>
+                        <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=disease">인체자원현황</a></li>
+                        <li><a href="http://grutech.iptime.org:7111/kbn/search/keywordSearch.do">인체자원검색</a></li>
+                        <li><a href="http://grutech.iptime.org:7111/apply/way.do">분양신청</a></li>
+                        <li><a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11100">알림</a></li>
+                    </ul>
+                </div>
+                <div class="gnb-wrap__subgnb-wrap">
+                    <div class="gnb-wrap__subgnb-wrap__content-wrap">
+                        <div class="gnb-wrap__subgnb-wrap__content">
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu01">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">소개</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">한국인체자원은행<br>네트워크(KBN)</a>
+                                            <ul>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=background">배경</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=history">연혁</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=vision">비전 및 전략</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=system">수행체계</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=law">관련법률</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=info">KBN 소개</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=portal">KBN Portal</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu02">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">인체자원현황</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">수집현황</a>
+                                            <ul>
+	                                             <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=disease">질환별</a></li>
+												 <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=human">인체유래물별</a></li>
+												 <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=organization">기관별</a></li>
+												 <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=year">연도별</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">분양현황</a>
+                                            <ul>
+                                            	<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=disease">질환별</a></li>
+												<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=human">인체유래물별</a></li>
+												<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=organization">기관별</a></li>
+												<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=year">연도별</a></li>
+												<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=tasklist">분양과제목록</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;">성과현황</a>
+                                            <ul>
+	                                            <li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=thesis">활용성과(논문)</a></li>
+												 <li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=patent">활용성과(특허)</a></li>
+												 <li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=research">주요우수연구성과</a></li>
+												 <li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=education">교육성과</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu03">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">인체자원검색</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/kbn/search/keywordSearch.do">키워드 검색</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/kbn/search/kcdSearch.do">KCD질병분류 검색</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu04">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">분양신청</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="javascript:;">분양신청안내</a>
+                                            <ul>
+                                                <li><a href="http://grutech.iptime.org:7111/apply/way.do">신청방법</a></li>
+                                                <li><a href="http://grutech.iptime.org:7111/apply/form.do">관련서식</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/apply/writeForm.do">분양신청서 작성</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="javascript:;" onclick="alert(&#39;준비중입니다&#39;);">온라인상담</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb-wrap__subgnb-wrap__content__submenu gnb-wrap__subgnb-wrap__content__submenu05">
+                                <h2 class="gnb-wrap__subgnb-wrap__content__submenu__title">알림</h2>
+                                <div class="gnb-wrap__subgnb-wrap__content__submenu__menu">
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11100">공지사항</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11200">자료실</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11300">갤러리</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11400">FAQ</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11500">관련사이트</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gnb-wrap-mo" style="height: 999px; display: none;">
+                <h2 class="gnb-wrap-mo__title">
+                    전체메뉴
+
+                    <div class="header-wrap__select language-select">
+                        <a href="javascript:;" class="header-wrap__select__title">LANGUAGE<span class="select-arrow"></span></a>
+                        <ul class="header-wrap__select__sub-menu">
+                            <li><a href="javascript:;">KOREAN</a></li>
+                            <li><a href="javascript:alert(&#39;준비중입니다&#39;);">ENGLISH</a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:;"><img src="./KBN PORTAL_files/icon_close_white.png" alt=""></a>
+                </h2>
+                <div class="gnb-wrap-mo__content">
+                    <div class="gnb-wrap-mo__content__top">
+                        <!-- 로그인 안된 경우 -->
+                        
+                        <ul>
+                            <li class="gnb-wrap-mo__content__login">
+                                <a href="http://grutech.iptime.org:7111/kbn/login/login.do">로그인</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- // 로그인 안된 경우 -->
+                        <!-- 로그인 된 경우 -->
+                        &gt;
+                        <!-- // 로그인 된 경우 -->
+                    </div>
+                    <div class="gnb-wrap-mo__content__menu-wrap">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu active">소개</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu" style="display: block;">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">한국인체자원은행 네트워크(KBN)</a>
+                                    </h3>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=background">배경</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=history">연혁</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=vision">비전 및 전략</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=system">수행체계</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=law">관련법률</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=info">KBN 소개</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do?menuNm=portal">KBN Portal</a></li>
+                           			</ul>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">인체자원현황</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">수집현황</a>
+                                    </h3>
+                                    <ul>
+	                                     <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=disease">질환별</a></li>
+										 <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=human">인체유래물별</a></li>
+										 <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=organization">기관별</a></li>
+										 <li><a href="http://grutech.iptime.org:7111/status/collect.do?menuNm=year">연도별</a></li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">분양현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=disease">질환별</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=human">인체유래물별</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=organization">기관별</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=year">연도별</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/parcelOut.do?menuNm=tasklist">분양과제목록</a></li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">성과현황</a>
+                                    </h3>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=thesis">활용성과(논문)</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=patent">활용성과(특허)</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=research">주요우수연구성과</a></li>
+										<li><a href="http://grutech.iptime.org:7111/status/result.do?menuNm=education">교육성과</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">인체자원검색</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/kbn/search/keywordSearch.do">키워드 검색</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <li><a href="http://grutech.iptime.org:7111/kbn/search/kcdSearch.do">KCD질병분류 검색</a></li>
+                                    </h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">분양신청</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;">분양신청안내</a>
+                                    </h3>
+                                    <ul>
+                                        <li><a href="http://grutech.iptime.org:7111/apply/way.do">신청방법</a></li>
+                                        <li><a href="http://grutech.iptime.org:7111/apply/form.do">관련서식</a></li>
+                                    </ul>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/apply/writeForm.do">분양신청서 작성</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="javascript:;" onclick="alert(&#39;준비중입니다&#39;);">온라인상담</a>
+                                    </h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="gnb-wrap-mo__content__menu">알림</a>
+                                <div class="gnb-wrap-mo__content__menu-wrap__sub-menu">
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11100">공지사항</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11200">자료실</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11300">갤러리</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11400">FAQ</a>
+                                    </h3>
+                                    <h3 class="gnb-wrap-mo__content__menu-wrap__sub-menu__title">
+                                        <a href="http://grutech.iptime.org:7111/board/list.do?p_boardCode=11500">관련사이트</a>
+                                    </h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // #header -->
+       
+
+
+
+
+
+<script>
+	const fn_getCurrentMenu = function(){
+		const pathname = window.location.pathname;
+		const currUrl = pathname +window.location.search;
+		let pramUrl = pathname.indexOf('/status/') > -1 ? pathname : currUrl;
+		$.ajax({
+			url:'/kbn/main/selectMenuList.do',
+			dataType:'json',
+			data:{'pMenuUrl' : pramUrl},
+			success:function(data){
+				var html1="";
+				var html2="";
+				var resultList  = data.resultList;
+				$.each(resultList, function(idx, list){
+					if(list.menuUrl == currUrl){ //2차 메뉴
+						$('.js-nm2').html(list.menuName);
+					}
+
+					if(list.menuUrl == pathname){//1차 메뉴. 나중에 쿼리 바꿔줘야함..
+						if(list.menuUrl.indexOf('/status/') > -1){
+							$('.js-nm1').html('인체자원현황'); 
+							$('.js-nm2').html(list.menuName);
+						}else if(list.menuUrl.indexOf('/search/') > -1){
+							$('.js-nm1').html('인체자원검색'); 
+							$('.js-nm2').html(list.menuName);
+						}else{
+							$('.js-nm1').html(list.menuName);
+						}
+					}
+					
+					if(list.lvl === '1'){
+						html1 += "<li><a href='"+list.menuUrl+"'>"+list.menuName+"</a></li>";
+					}
+					if(list.lvl === '2'){
+						html2 += "<li><a href='"+list.menuUrl+"'>"+list.menuName+"</a></li>";
+					}
+				});
+				
+				$('.js-html1').html(html1);
+				$('.js-html2').html(html2);
+			},
+			error:function(e){
+				console.error(e);
+			}
+		})
+	} ;
+
+	$(document).ready(function(){
+		fn_getCurrentMenu();
+	})
+	
+</script>
+<!-- menu start -->
+<div id="container" class="">
+            <div class="line_map">
+                <ul class="wrap">
+                    <li class="home_btn"><a href="http://grutech.iptime.org:7111/">
+                    	<img src="./KBN PORTAL_files/icon_sub_home.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="js-nm1"></a>
+                        <ul class="line_map_sub js-html1"><li><a href="http://grutech.iptime.org:7111/intro/kbnIntro.do">소개</a></li><li><a href="http://grutech.iptime.org:7111/status/">인체자원현황</a></li><li><a href="http://grutech.iptime.org:7111/kbn/search/keywordSearch.do">인체자원검색</a></li><li><a href="http://grutech.iptime.org:7111/apply/way.do">분양신청</a></li><li><a href="http://grutech.iptime.org:7111/board/list.do">알림</a></li></ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="js-nm2"></a>
+                        <ul class="line_map_sub js-html2"></ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- line_map -->
+ 
+<!-- header -->
+<style>
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+* html .ui-autocomplete {
+	height: 200px;
+}
+</style>
+<!-- #container -->
+
+
+	<h4 class="sub_tit">KCD질병분류 검색</h4>
+    <div class="inner bottom_none">
+        <ul class="tab_box tap_w_2">
+            <li><a href=".html">빠른검색</a></li>
+            <li class="on"><a href="kcdSearch.html">단계별검색</a></li>
+        </ul>
+    </div>
+	<div class="kwyword_tap mt40">
+        <ul class="inner">
+            <li class="check"><span>1</span>기본정보검색</li>
+            <li class="on"><span>2</span>임상정보검색</li>
+        </ul>
+    </div>
+
+	<div class="contents_sub inner only_pc">
+		<div class="kcdSearch_wrap">
+			<form id="searchForm" name="searchForm" method="post" action="http://grutech.iptime.org:7111/kbn/search/clinicalInformation.do" target="param">
+                <input type="hidden" id="kbankName" name="kbankName" value="경상대병원">
+                <input type="hidden" id="age" name="age" value="70대">
+                <input type="hidden" id="cnt" name="cnt" value="139">
+                <input type="hidden" id="sex" name="sex" value="남자">
+				<input type="hidden" id="pageNo" name="pageNo" value="1">
+                <div class="kcdSearch_stap_wrap">
+    				<div class="kcdSearch_stap">
+                        <div>
+                            <h2>분류를 선택하세요.</h2>
+                        </div>
+    					<div class="mt10 mb10 kcdSearch_txt">
+    						<input type="text" id="SearchClinical" name="SearchClinical" autocomplete="off" onkeyup="SearchKey(this.value,&#39;1&#39;);">
+                            <div class="kcdSearch_txt_btn">
+                                <button class="kcdSearch_txt_ex " type="button"><img src="../../images/btn/btn_ex.png"></button>
+                            </div>
+    					</div>
+    					<div>
+    						<select id="Code1th" size="5" onchange="clinicalChose(this.id,&#39;2&#39;);">
+    									
+    										<option value="HDisease">질병력</option>
+    									
+    										<option value="Habit">생활습관</option>
+    									
+    										<option value="Anthro">신체계측</option>
+    									
+    										<option value="ClinicalExam">임상검사</option>
+    									
+    								</select><table>
+    							<colgroup>
+    								<col style="width:20%">
+    							</colgroup>
+    							<tbody id="flowListDiv">
+    								
+    							</tbody>
+    						</table>
+    					</div>
+    				</div>
+    				<div class="kcdSearch_stap">
+    					<div>
+                            <h2>항목을 선택하세요.</h2>
+                        </div>
+                        <div class="mt10 mb10 kcdSearch_txt">
+    						<input type="text" id="SearchClinical" name="SearchClinical" autocomplete="off" onkeyup="SearchKey(this.value,&#39;2&#39;);">
+                            <div class="kcdSearch_txt_btn">
+                                <button class="kcdSearch_txt_ex " type="button"><img src="../../images/btn/btn_ex.png"></button>
+                            </div>
+    					</div>
+    					<div>
+    						<select id="Code2th" size="5" onchange="clinicalChose(this.id,&#39;3&#39;);"><option id="2" value="dhca">암 질병력 유무</option><option id="2" value="dhca1">암 질병력 질병명</option><option id="2" value="dhca1etc">암 질병력 기타 질병명</option><option id="2" value="dhca2">암 질병력 질병명</option><option id="2" value="dhca2etc">암 질병력 기타 질병명</option><option id="2" value="dhnca">암 제외 질병력 유무</option><option id="2" value="dhnca1">암 제외 질병력 질병명</option><option id="2" value="dhnca1etc">암 제외 질병력 기타 질병명</option><option id="2" value="dhnca2">암 제외 질병력 질병명</option><option id="2" value="dhnca2etc">암 제외 질병력 기타 질병명</option></select><table>
+    							<colgroup>
+    								<col style="width:20%">
+    							</colgroup>
+    							<tbody id="flowListDiv">
+    								
+    							</tbody>
+    						</table>
+    					</div>
+    				</div>
+    				<div class="kcdSearch_stap">
+    					<div>
+                            <h2>선택 또는 값을 입력해주세요.</h2>
+                        </div>
+                        <div class="mt10 mb10 kcdSearch_txt">
+                            <input type="text" id="SearchClinical" name="SearchClinical" autocomplete="off" onkeyup="SearchKey(this.value,&#39;3&#39;);">
+                            <div class="kcdSearch_txt_btn">
+                                <button class="kcdSearch_txt_ex " type="button"><img src="../../images/btn/btn_ex.png"></button>
+                            </div>
+    					</div>
+    					<div id="Code3Div" class="Code3Input">
+    						<select id="Code3th" class="Code3th_2" size="5" onchange="clinicalChose(this.id,this.value);">
+                                <!-- <option id="dhca1" class="dhca1" value="1">위암</option><option id="dhca1" class="dhca1" value="2">대장암</option><option id="dhca1" class="dhca1" value="3">폐암</option><option id="dhca1" class="dhca1" value="4">간암</option><option id="dhca1" class="dhca1" value="5">갑상선암</option><option id="dhca1" class="dhca1" value="6">신장암</option><option id="dhca1" class="dhca1" value="7">유방암</option><option id="dhca1" class="dhca1" value="8">혈액암</option><option id="dhca1" class="dhca1" value="9">전립선암</option><option id="dhca1" class="dhca1" value="10">기타</option><option id="dhca1" class="dhca1" value="66666">검사/조사미시행</option><option id="dhca1" class="dhca1" value="77777">해당없음</option> -->
+                            </select>
+                            <div id="Code3InDiv" class="Code3Input_box">
+                                <input type="" name="">~<input type="" name="">
+                            </div>
+                            <div id="Code3InDiv" class="Code3InDiv_one">
+                                <input type="" name="">
+                            </div>
+                            <div class="kwyword_search_box" onclick="codeSearch();">
+                                <button type="button" class="gray">+ 추가하기</button>
+                            </div>
+                            <table>
+    							<colgroup>
+    								<col style="width:20%">
+    							</colgroup>
+    							<tbody id="flowListDiv">
+    								
+    							</tbody>
+    						</table>
+    					</div>
+    				</div>
+    				<div class="kcdSearch_stap">
+    					<div>
+                            <h2>원하는 항목을 모아 검색하세요!</h2>
+                        </div>
+    					<div class="disease_search_box ui-widget">
+    						<div id="Code4th" class="disease_search_list_wrap disease_search_list_wrap2"><ul id="dhca11" name="dhca11"><li>암 질병력 질병명</li><li>위암<div id="dhca11" onclick="delDisease(this.id)"></div></li></ul>
+                            </div>
+                            <div class="kwyword_search_box" onclick="codeSearch();">
+                                <button type="button" ><img src="../../images/icon/search_icon.png">검색</button>
+                            </div>
+                            <table>
+    							<colgroup>
+    								<col style="width:20%">
+    							</colgroup>
+    							<tbody id="flowListDiv">
+    								
+    								
+    							
+    							</tbody>
+    						</table>
+    					</div>
+    				</div>
+                </div>
+                <!-- kcdSearch_stap_wrap -->
+                <div class="line_dashed"></div>
+			<input type="hidden" id="dhca1_1" class="dhca11" name="search|dhca1" value="=1::TEXT"></form>
+		</div>
+		<div class="kwyword_search_con">
+            <table class="table_type_01" id="searchDResultList">
+                <colgroup>
+                    <col width="70px">
+                    <col width="*">
+                    <col width="106px">
+                    <col width="106px">
+                    <col width="106px">
+                    <col width="66px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">번호</th>
+                        <th rowspan="2">단위은행</th>
+                        <th rowspan="2">나이</th>
+                        <th rowspan="2">건수</th>
+                        <th rowspan="2">성별</th>
+                        <th>선택</th>
+                    </tr>
+                    <tr>
+                        <th><input id="kwSearchAll" type="checkbox" name="keywordSearch" class="allcheck"><label for="kwSearchAll"></label></th>
+                    </tr>
+                </thead>
+                <tbody> 
+                	<tr>
+                		<td>01</td>
+                		<td>인제대부산백병원</td>
+                		<td>60대</td>
+                		<td>603</td>
+                        <td>남자</td>
+                        <td><input type="checkbox" ><label for=""></label></td>
+                	</tr>
+                    <tr>
+                        <td>02</td>
+                        <td>인제대부산백병원</td>
+                        <td>60대</td>
+                        <td>603</td>
+                        <td>남자</td>
+                        <td><input type="checkbox" ><label for=""></label></td>
+                    </tr>
+                	
+                </tbody>
+            </table>
+            <div id="moreBtn" class="kwyword_sub_btn more_btn" style="display: block;">
+                <button class="gray_2" onclick="fn_searchDMore();">더보기 <img src="../../images/icon/icon_more.png"></button>
+            </div>
+        </div>
+               <div id="moreBtn" class="kwyword_sub_btn ">
+                    <button class="gray" onclick="fn_locker();"><img src="../../images/icon/icon_save_btn.png">관심자원보관</button>
+                </div>
+				<form name="clinicalForm" id="clinicalForm" method="post">
+					<input type="hidden" name="searchVal" id="searchVal" value="">
+				</form>
+	</div>
+</div>
+<!-- // #container -->
+
+
+
+
+<div class="footer_site">
+            <div class="footer_site_wrap">
+                <div><a <a href="http://www.cdc.go.kr/" target="black;"><img src="../../images/com/footer_site_logo_01.png" alt="질병관리본부" /></a></div>
+                <div><a href="http://koreabiobank.re.kr/" target="black;"><img src="../../images/com/footer_site_logo_02.png" alt="국립중앙인체자원은행" /></a></div>
+                <div><a href="https://www.catholic.ac.kr/index.do" target="black;"><img src="../../images/com/footer_site_logo_03.png" alt="가톨릭대학교" /></a></div>
+            </div>
+        </div>
+        <!-- //footer_site -->
+        <!-- #footer -->
+        <div id="footer">
+            <div class="footer-wrap">
+                <div class="footer-wrap__logo">
+                    <img src="../../images/com/foot_logo.gif" alt="KBN PORTAL" />
+                </div>
+                <div class="footer-wrap__address">
+                    <p class="address">서울시 서초구 반포대로 222 가톨릭대학교 서울성모병원 별관 (06591)<br />대표전화 : 02-6964-7377</p>
+                    <p class="copyright">COPYRIGHT &copy; 2019 THE CATHOLIC UNIVERSITY OF KOREA, SEOUL ST. MARY’S HOSPITAL. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="footer-wrap__today">
+                    <div class="visitor">
+                        <span class="title today">오늘 방문자 수</span><span class="count">80명</span>
+                    </div>
+                    <div class="visitor">
+                        <span class="title all">전체 방문자 수</span><span class="count">120,038명</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // #footer -->
+    </div>
+
+
+<!-- header -->
+</div><style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style><canvas id="__gesture_canvas__" width="0" height="0" style="z-index: 100000000; position: fixed; background: transparent !important; top: 0px; left: 0px;"></canvas><span id="__gesture_preview__" style="z-index: 100000001; position: absolute; background: rgba(255, 255, 225, 0.85); margin: 0px; border: 1px solid black; white-space: nowrap; display: none;"></span></body></html>
